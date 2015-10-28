@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>商家列表</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+    <script type="text/javascript" src="js/swiper-2.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-wrap-left">
+        <a href="index.html" class="nav-return-btn"></a>
+    </div>
+    <div class="nav-title">品牌商家</div>
+    <div id="J_BtnMenu" class="nav-wrap-right2">
+        <a class="nav-menu-btn"></a>
+    </div>
+    <div id="J_Menu" class="nav-menu">
+        <ul>
+            <li class="item">
+                <a href="index.html" class="cf">
+                    <i class="ico-menu1"></i>
+                    <span>品牌首页</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="list.html" class="cf">
+                    <i class="ico-menu2"></i>
+                    <span>所有分类</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="" class="cf">
+                    <i class="ico-menu3"></i>
+                    <span>我的品牌</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="search.html" class="cf">
+                    <i class="ico-menu4"></i>
+                    <span>查找商家</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="nav-bar" id="J_TabTit">
+    <ul class="nav" id="select">
+        <li class="category">
+            <span class="nav-header-name">美食<i class="arrow"></i></span>
+        </li>
+        <li class="subway">
+            <span class="nav-header-name">全城<i class="arrow"></i></span>
+        </li>
+        <li class="csp">
+            <span class="nav-header-name">排序<i class="arrow"></i></span>
+        </li>
+    </ul>
+    <div class="tabCon" id="J_TabCon">
+        <div class="mod none">
+            <div class="row1" id="dropdown_scroller">
+                <ul>
+                    <a href="javascript:" class="item ">全部<i>888</i></a>
+                    <a href="javascript:" class="item cur">美食<i>666</i></a>
+                    <a href="javascript:" class="item">电影<i>646</i></a>
+                    <a href="javascript:" class="item">景点<i>454</i></a>
+                    <a href="javascript:" class="item">教育<i>78</i></a>
+                    <a href="javascript:" class="item">购物<i>451</i></a>
+                    <a href="javascript:" class="item">休闲娱乐<i>352</i></a>
+                    <a href="javascript:" class="item">亲子<i>125</i></a>
+                    <a href="javascript:" class="item">爱车<i>322</i></a>
+                    <a href="javascript:" class="item">教育<i>445</i></a>
+                    <a href="javascript:" class="item">购物<i>78</i></a>
+                    <a href="javascript:" class="item">休闲娱乐<i>66</i></a>
+                    <a href="javascript:" class="item">亲子<i>15</i></a>
+                    <a href="javascript:" class="item">爱车<i>33</i></a>
+                </ul>
+            </div>
+            <div class="row2" id="dropdown_sub_scroller">
+                <ul>
+                    <a href="javascript:" class="item ">全部<i>666</i></a>
+                    <a href="javascript:" class="item cur">川菜<i>388</i></a>
+                    <a href="javascript:" class="item">咖啡厅<i>126</i></a>
+                    <a href="javascript:" class="item">湘菜<i>55</i></a>
+                    <a href="javascript:" class="item">酒吧<i>101</i></a>
+                    <a href="javascript:" class="item">海鲜<i>49</i></a>
+                    <a href="javascript:" class="item">东北菜<i>57</i></a>
+                    <a href="javascript:" class="item">茶馆<i>99</i></a>
+                    <a href="javascript:" class="item">粤菜<i>48</i></a>
+                    <a href="javascript:" class="item">江浙菜<i>16</i></a>
+                    <a href="javascript:" class="item">清真菜<i>12</i></a>
+                    <a href="javascript:" class="item">火锅<i>99</i></a>
+                    <a href="javascript:" class="item">韩国料理<i>66</i></a>
+                    <a href="javascript:" class="item">自助餐<i>258</i></a>
+                    <a href="javascript:" class="item">西餐<i>48</i></a>
+                    <a href="javascript:" class="item">面包甜点<i>205</i></a>
+                    <a href="javascript:" class="item">日本料理<i>69</i></a>
+                    <a href="javascript:" class="item">东南亚菜<i>38</i></a>
+                </ul>
+            </div>
+        </div>
+        <div class="mod none">
+            <ul>
+                <a href="javascript:" class="item cur">全城<i>666</i></a>
+                <a href="javascript:" class="item">崇川区<i>128</i></a>
+                <a href="javascript:" class="item">港闸区<i>88</i></a>
+                <a href="javascript:" class="item">海门市<i>54</i></a>
+                <a href="javascript:" class="item">启东市<i>32</i></a>
+                <a href="javascript:" class="item">通州市<i>18</i></a>
+                <a href="javascript:" class="item">如皋市<i>86</i></a>
+                <a href="javascript:" class="item">如东县<i>78</i></a>
+                <a href="javascript:" class="item">海安县<i>45</i></a>
+            </ul>
+        </div>
+        <div class="mod none">
+            <ul>
+                <a href="javascript:" class="item cur">默认排序</a>
+                <a href="javascript:" class="item">离我最近</a>
+                <a href="javascript:" class="item">评价最高</a>
+                <a href="javascript:" class="item">最新发布</a>
+                <a href="javascript:" class="item">人气最高</a>
+                <a href="javascript:" class="item">濠滨推荐</a>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="list-box">
+    <div class="bd">
+        <ul>
+            <li>
+                <a href="content.html">
+                    <div class="dealcad-img fl"><img src="img/1.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">斑鱼火锅</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(72)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>解放路</span><span>火锅</span></div>
+                            <div class="dealcad-jl fr">659米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="content.html">
+                    <div class="dealcad-img fl"><img src="img/2.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">文峰阿英堡</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(163)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>工农路</span><span>小吃</span></div>
+                            <div class="dealcad-jl fr">859米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="content.html">
+                    <div class="dealcad-img fl"><img src="img/3.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">鱼情未了八佰伴</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(152)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>青年路</span><span>火锅</span></div>
+                            <div class="dealcad-jl fr">0.2千米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="content.html">
+                    <div class="dealcad-img fl"><img src="img/4.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">邵东家中南店</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(52)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>工农路</span><span>快餐</span></div>
+                            <div class="dealcad-jl fr">2.5千米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="jian">减</span>消费满100减50元，满200减120元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/5.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">冰雪华府</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(255)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>孩儿巷路</span><span>冰淇淋</span></div>
+                            <div class="dealcad-jl fr">529米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/1.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">斑鱼府火锅</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(72)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>解放路</span><span>火锅</span></div>
+                            <div class="dealcad-jl fr">659米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/2.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">文峰阿英堡</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(163)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>工农路</span><span>小吃</span></div>
+                            <div class="dealcad-jl fr">859米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/3.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">鱼情未了八佰伴</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(152)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>青年路</span><span>火锅</span></div>
+                            <div class="dealcad-jl fr">0.2千米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/4.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">邵东家中南店</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(52)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>工农路</span><span>快餐</span></div>
+                            <div class="dealcad-jl fr">2.5千米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="jian">减</span>消费满100减50元，满200减120元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/5.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">冰雪华府</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(255)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>孩儿巷路</span><span>冰淇淋</span></div>
+                            <div class="dealcad-jl fr">529米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/1.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">斑鱼府火锅</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(72)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>解放路</span><span>火锅</span></div>
+                            <div class="dealcad-jl fr">659米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/2.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">文峰阿英堡</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(163)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>工农路</span><span>小吃</span></div>
+                            <div class="dealcad-jl fr">859米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/3.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">鱼情未了八佰伴</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(152)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>青年路</span><span>火锅</span></div>
+                            <div class="dealcad-jl fr">0.2千米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/4.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">邵东家中南店</div>
+                            <div class="dealcad-plus fr">外</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(52)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>工农路</span><span>快餐</span></div>
+                            <div class="dealcad-jl fr">2.5千米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="jian">减</span>消费满100减50元，满200减120元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">
+                    <div class="dealcad-img fl"><img src="img/3.jpg"></div>
+                    <div class="dealcad-block fl">
+                        <div class="dealcad-row1">
+                            <div class="dealcad-title fl">鱼情未了八佰伴</div>
+                        </div>
+                        <div class="dealcad-row2 fl">
+                            <div class="dealcad-xx fl"></div>
+
+                            <div class="dealcad-xx2 length fl"></div>
+                            <div class="dealcad-pl fl">(152)</div>
+                        </div>
+                        <div class="dealcad-row3 fl">
+                            <div class="dealcad-ss fl"><span>青年路</span><span>火锅</span></div>
+                            <div class="dealcad-jl fr">0.2千米</div>
+                        </div>
+                        <div class="sale-yh fl">
+                            <span class="quan">券</span>80代100元，65代100元
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</section>
+<div class="pager">
+    <a class="prever-btn">上一页</a>
+    <span class="pager-current">1</span>
+    <a class="next-btn">下一页</a>
+</div>
+<footer class="foot">
+    ©2015 品牌商家 苏ICP备05014191号
+</footer>
+<div class="top-btn">
+    <a class="react"></a>
+</div>
+<div class="mask-black none"></div>
+<div class="mask-transparent none"></div>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

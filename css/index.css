@@ -1,0 +1,334 @@
+/* Õº∆¨¬÷≤• */
+.index-banner {
+    position: relative;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: 1;
+    width: 100%
+}
+
+.index-banner .swiper-wrapper li {
+    float: left;
+    height: 1.2rem;
+}
+
+.index-banner .swiper-wrapper li img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.index-banner .index-pagination-box{
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    z-index: 999;
+    bottom: 0;
+    text-align: center;
+}
+
+.index-banner .index-pagination {
+    height: 0.14rem;
+    line-height: 0.05rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 0.1rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    
+}
+
+.index-banner .index-pagination span {
+    display: inline-block;
+    width: 0.06rem;
+    height: 0.06rem;
+    margin: 0.04rem;
+    border-radius: 50%;
+    background: #aaaaaa;
+
+}
+
+.index-banner .index-pagination span.swiper-active-switch {
+    background: #fff;
+}
+
+/* ∑÷¿‡ */
+.menu{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1.7rem;
+    background: #ffffff;
+    border-bottom: 1px solid #d9d9d9;
+}
+.menu .swiper-wrapper{
+
+    -webkit-backface-visibility: hidden;
+    z-index: 1;
+}
+.menu .swiper-wrapper .swiper-slide {
+    float: left;
+}
+.menu .swiper-wrapper .swiper-slide .icon{
+    float: left;
+    width: 25%;
+
+}
+.menu .swiper-wrapper .swiper-slide .icon a{
+    display: block;
+    text-align: center;
+    font-size: 0.12rem;
+    padding: 0.05rem 0;
+}
+
+.menu .swiper-wrapper .swiper-slide .icon i{
+    font-size: 0.12rem;
+    display: block;
+    text-align: center;
+    margin: 0.05rem auto;
+    width: 0.44rem;
+    height: 0.44rem;
+    background: url(../img/index.png);
+    background-size: 54px 379px;
+}
+
+.menu .swiper-wrapper .swiper-slide .xxyl i{
+    background-position: -5px -3px;
+}
+.menu .swiper-wrapper .swiper-slide .yhq i{
+    background-position: -5px -51px;
+}
+
+.menu .swiper-wrapper .swiper-slide .hyk i{
+    background-position: -5px -98px;
+}
+.menu .swiper-wrapper .swiper-slide .gw i{
+    background-position: -5px -145px;
+}
+
+.menu .swiper-wrapper .swiper-slide .jy i{
+    background-position: -5px -192px;
+}
+
+.menu .swiper-wrapper .swiper-slide .jd i{
+    background-position: -5px -238px;
+}
+
+.menu .swiper-wrapper .swiper-slide .dy i{
+    background-position: -5px -285px;
+}
+.menu .swiper-wrapper .swiper-slide .food i{
+    background-position: -5px -332px;
+}
+.menu .icon-co{
+    position: absolute;
+    width: 100%;
+    height: 0.16rem;
+    z-index: 999;
+    bottom: 0;
+    text-align: center;
+
+}
+.menu .icon-co .keng{
+    line-height: 0.06rem;
+}
+
+.menu .icon-co .keng span {
+    width: 0.06rem;
+    height: 0.06rem;
+    margin: 0.04rem 0.05rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #F5F5F5;
+    border: 1px solid #ccc;
+
+}
+.menu .icon-co .keng span.swiper-active-switch {
+    background: #FF5F00;
+    border: none;
+}
+
+.root {
+    width: 100%;
+    overflow-x: hidden
+}
+.main {
+    position: relative;
+    z-index: 2;
+    background: #f0efed;
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    transition: transform .3s;
+    overflow: hidden
+}
+
+.navdrawer {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 30%;
+    height: 100%;
+    background: #f8f8f8;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    color: #fff
+}
+
+.navdrawer .user {
+    width: 100%;
+    margin-top: 36px
+}
+
+.navdrawer .user-inner {
+    width: 166px;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center
+}
+
+.navdrawer .user .message, .navdrawer .user .exit, .navdrawer .user .avatar {
+    display: inline-block;
+    vertical-align: top
+}
+
+.navdrawer .user .avatar {
+    width: 70px
+}
+
+.navdrawer .user .avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%
+}
+
+.navdrawer .user .message {
+    margin-top: 29px;
+    margin-right: 15px
+}
+
+.navdrawer .user .exit {
+    margin-top: 29px;
+    margin-left: 14px
+}
+
+.navdrawer .user a i {
+    display: block;
+    width: 24px;
+    height: 26px;
+    color: #68676d;
+    font-size: 22px;
+    text-align: center;
+    line-height: 26px
+}
+
+.navdrawer .user .user-name {
+    clear: both;
+    width: 100%;
+    padding-top: 12px;
+    text-align: center
+}
+
+.navdrawer .user .user-name a {
+    display: inline-block;
+    font-size: 16px;
+    white-space: nowrap
+}
+
+.navdrawer .menu-list {
+    margin-top: 37px
+}
+
+.navdrawer .menu-list li {
+    font-size: 0
+}
+
+.navdrawer .menu-list .cur {
+    background: rgba(147, 120, 62, .16)
+}
+
+.navdrawer .menu-list li a {
+    display: block;
+    height: 56px;
+    font-size: 16px;
+    line-height: 56px;
+    text-align: center;
+    color: #666;
+}
+
+.navdrawer .menu-list .cur a{
+    color: #43424a;
+}
+
+.navdrawer .menu-list li a i {
+    display: inline-block;
+    vertical-align: top;
+    width: 26px;
+    height: 26px;
+    margin: 15px 12px 0 -14px;
+    background: url(../img/main.png) no-repeat;
+    background-size: 0.76rem 2.03rem;
+    font-size: 0
+}
+
+.navdrawer .menu-list li a .ico-home {
+    background-position: -28px -121px;
+}
+
+.navdrawer .menu-list li a .ico-nav {
+    background-position: -52px -121px;
+}
+
+.navdrawer .menu-list li a .ico-delicate {
+    background-position: 2px -146px
+}
+
+.navdrawer .menu-list li a .ico-photography {
+    background-position: -22px -146px
+}
+
+
+
+.navdrawer .menu-list li a span {
+    display: inline-block;
+    vertical-align: top
+}
+
+.navdrawer-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease
+}
+
+body.nav-view {
+    overflow: hidden
+}
+
+body.nav-view .main {
+    -webkit-transform: translateX(70%);
+    -moz-transform: translateX(70%);
+    transform: translateX(70%);
+    -webkit-filter: saturate(0.85);
+    opacity: .96
+}
+
+body.nav-view .navdrawer {
+    display: block
+}
+
+body.nav-view .navdrawer-mask {
+    opacity: 0.6;
+    visibility: visible
+}
+
+
+
