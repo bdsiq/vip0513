@@ -186,7 +186,8 @@ $(function () {
     //点的宽度
     var $pagCt = $('#pagination-ct'),
         $pagSpan = $pagCt.find('span').length,
-        $pagWidth = $pagSpan * 12 + 26;
+        $pagWidth = $pagSpan * 14 + 20;
+    //alert($pagSpan);
     $pagCt.css('width', $pagWidth);
 
     //翻页
