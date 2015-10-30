@@ -1,26 +1,40 @@
 $(function () {
 
-    //滑动效果
-    var mySwiper;
-    mySwiper = new Swiper('.index-banner', {
-        pagination: '.index-pagination',
-        loop: true,
-        grabCursor: true,
-        paginationClickable: true,
-        initialSlide: 2
-    });
-    $(".index-banner ul li img").show();
-    var mySwiper2;
-    mySwiper2 = new Swiper('.menu', {
-        pagination: '.keng',
-        loop: true,
-        grabCursor: true,
-        paginationClickable: true,
-        initialSlide: 2
-    });
-    $(".icon-list").show();
+    // 点击事件封装
+    var UA = window.navigator.userAgent;
+    var CLICK = 'click';
+    if (/ipad|iphone|android/.test(UA)) {
+        CLICK = 'tap';
+    }
 
+    var msg = $('#J_Msg');
+    var timer1 = null;
 
+    function showBox() {
+        msg.css('visibility', 'visible').attr('class', 'msg BounceInB');
+    }
+    function hideBox() {
+        msg.attr('class', 'msg BounceOutB');
+    }
+
+    // 收藏s
+    $('.fav').on(CLICK, function() {
+        msg.css({'width':'110px', 'margin-left':'-55px'});
+        if (!this.classList.contains('select')) {
+            this.classList.add('select');
+            msg.text('收藏成功');
+        } else {
+            this.classList.remove('select');
+            msg.text('已取消收藏');
+        }
+        clearTimeout(timer1);
+        showBox();
+        timer1 = setTimeout(function() {
+            hideBox();
+        }, 1500);
+    });
+
+    // 收藏e
 
 
 
@@ -46,7 +60,7 @@ $(function () {
         }, 150);
     }
 
-    $btnMenu.on('click', function () {
+    $btnMenu.on(CLICK, function () {
         showMenu()
     });
     $maskTr.on({
@@ -114,16 +128,13 @@ $(function () {
         $tabConItem = $tabConMod.find('.item'),
         $maskBl = $('.mask-black');
 
-    $tabConItem.on('click', function () {
+    $tabConItem.on(CLICK, function () {
         $(this).addClass('cur').siblings().removeClass('cur');
     });
 
-    $tabTitItem.on('click', function () {
+    $tabTitItem.on(CLICK, function () {
         var index = $(this).index();
         $tabCon.removeClass('none');
-        //$('body').css(
-        //    'overflow','hidden'
-        //)
         $tabTitItem.eq(index).addClass('active').siblings().removeClass('active');
         $tabConMod.eq(index).removeClass('none').siblings().addClass('none');
         $tabConMod.eq(index).addClass('dd').siblings().removeClass('dd');
@@ -131,10 +142,6 @@ $(function () {
         showMaskB();
         loaded();
     });
-
-
-
-
 
     $maskBl.on({
         click: function () {
@@ -154,6 +161,12 @@ $(function () {
         $maskBl.addClass('none');
     }
 
+    // 发送给好友提示
+    $('.share').on(CLICK, function(){
+        $maskBl.show();
+        $maskBl.children().show();
+    });
+
 
     //展开收缩
 
@@ -161,7 +174,7 @@ $(function () {
     //$arrowDown = $arrowFz.find('i');
         $useSm = $('#useTxt');
 
-    $arrowFz.on('click', function () {
+    $arrowFz.on(CLICK, function () {
         $useSm.slideToggle();
         //$arrowDown.toggleClass('active');
     });
@@ -206,34 +219,7 @@ $(function () {
     btnchange();
 
 
-    //瀑布流s
-    $('#tiles').imagesLoaded(function () {
-        var options = {
-            itemWidth: 150,
-            autoResize: true,
-            container: $('#tiles'),
-            offset: 5,
-            outerOffset: 5,
-            flexibleWidth: '50%'
-        };
 
-        var handler = $('#tiles li'),
-            $window = $(window);
-
-        $window.resize(function () {
-            var windowWidth = $window.width(),
-                newOptions = {
-                    flexibleWidth: '50%'
-                };
-            if (windowWidth < 1024) {
-                newOptions.flexibleWidth = '100%';
-            }
-            handler.wookmark(newOptions);
-        });
-        handler.wookmark(options);
-    });
-
-    //瀑布流e
 
     //图片放大s
     var viewImage = $('#tiles li img'),
@@ -242,7 +228,7 @@ $(function () {
         maskBl2 = $('.mask-black2');
 
 
-    viewImage.on('click', function () {
+    viewImage.on(CLICK, function () {
         var img_src = $(this).attr('src');
         bigImage.removeClass('none');
         newImage.attr('src', img_src);
@@ -251,7 +237,7 @@ $(function () {
 
     });
 
-    bigImage.on('click', function () {
+    bigImage.on(CLICK, function () {
         bigImage.addClass('none');
         document.removeEventListener('touchmove', stopRolling, false);
         hideMaskB2();

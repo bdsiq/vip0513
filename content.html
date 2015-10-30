@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.cxdialog.css" media="screen">
     <script type="text/javascript" src="js/swiper-2.0.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.cxdialog.min.js"></script>
 </head>
 <body>
 <header class="navbar">
@@ -27,7 +26,7 @@
             <li class="item">
                 <a href="index.html" class="cf">
                     <i class="ico-menu1"></i>
-                    <span>品牌首页</span>
+                    <span>首页</span>
                 </a>
             </li>
             <li class="item">
@@ -45,7 +44,7 @@
             <li class="item">
                 <a href="search.html" class="cf">
                     <i class="ico-menu4"></i>
-                    <span>查找商家</span>
+                    <span>搜索</span>
                 </a>
             </li>
         </ul>
@@ -56,6 +55,7 @@
         <div class="pic fl"><a href=""><img src="img/s1.jpg"></a></div>
         <div class="txt fl">
             <span class="shop-name fl">蒙自源过桥米线</span>
+
             <div class="pingjia fl">
                 <div class="dealcad-xx fl"></div>
                 <div class="dealcad-xx2 length fl"></div>
@@ -102,20 +102,20 @@
         </ul>
     </div>
 </section>
+
 <section class="shop-info shop-comment">
     <div class="detail-mode shop-pj fl">
         <a class="hd fl" href="evaluate.html"><span>评价</span><i class="left-arrow fr"></i></a>
-
         <div class="bd fl">
             <div class="user-img fl">
                 <img src="img/t1.jpg">
             </div>
             <div class="user-txt fl">
                 <span class="user-name">苏鲁梅朵</span>
-
                 <div class="pingjia fl">
                     <div class="dealcad-xx fl"></div>
                     <div class="dealcad-xx2 length fl"></div>
+                    <div class="dealcad-time fr">2015-10-17</div>
                 </div>
                 <p>
                     公司聚餐。环境还不错，对于寸土寸金的自助餐厅来说很有情怀，喜欢。布局有的地方过道有点窄，但也在接受范围内。
@@ -129,16 +129,19 @@
             </div>
             <div class="user-txt fl">
                 <span class="user-name">苏鲁梅朵</span>
-
                 <div class="pingjia fl">
                     <div class="dealcad-xx fl"></div>
                     <div class="dealcad-xx2 length fl"></div>
+                    <div class="dealcad-time fr">2015-10-17</div>
                 </div>
                 <p>
                     我最喜欢他们家的米线，里面的番茄牛肉和酸辣米线挺好吃的，还有小炒肉饭和肥牛饭也好吃。每个礼拜都要去好几次，今天点的番茄牛肉米线和肥牛饭挺不错的。
                 </p>
                 <img src="img/p4.jpg"><img src="img/p5.jpg">
             </div>
+        </div>
+        <div class="bd pj-btn fl">
+            <a href="" >我要点评</a>
         </div>
     </div>
 </section>
@@ -148,33 +151,16 @@
 <div class="top-btn">
     <a class="react"></a>
 </div>
+<!-- 弹出框/S -->
+<div id="J_Msg" class="msg" style="bottom: 81px;">收藏成功</div>
+<!-- 弹出框/S -->
 
+<!-- 遮罩/S -->
+<div class="mask-black none">
+    <div class="share-text"></div>
+</div>
+<!-- 遮罩/E -->
 <div class="mask-transparent none"></div>
 <script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript">
-    $(".fav:contains('收藏')").on('click', function () {
-        if ($('.fav span').text() == '收藏') {
-            $('.fav span').text("已收藏");
-            $('.fav i').css('background-position', '-38px -104px');
-            $.cxDialog({
-                info: '收藏成功',
-                baseClass: 'new'
-            });
-            setTimeout(function () {
-                $.cxDialog.close();
-            }, 1500);
-        } else {
-            $('.fav span').text("收藏");
-            $('.fav i').css('background-position', '-20px -104px');
-            $.cxDialog({
-                info: '取消收藏',
-                baseClass: 'new'
-            });
-            setTimeout(function () {
-                $.cxDialog.close();
-            }, 1500);
-        }
-    });
-</script>
 </body>
 </html>

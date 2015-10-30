@@ -394,6 +394,27 @@
 </div>
 <div class="pullrefresh" style="display:none;"></div>
 <script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    //滑动效果
+    var mySwiper;
+    mySwiper = new Swiper('.index-banner', {
+        pagination: '.index-pagination',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true,
+        initialSlide: 2
+    });
+    $(".index-banner ul li img").show();
+    var mySwiper2;
+    mySwiper2 = new Swiper('.menu', {
+        pagination: '.keng',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true,
+        initialSlide: 2
+    });
+    $(".icon-list").show();
+</script>
 
 </body>
 </html>

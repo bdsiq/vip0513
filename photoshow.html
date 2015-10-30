@@ -8,7 +8,6 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>商家详情</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
-    <script type="text/javascript" src="js/swiper-2.0.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript" src="js/jquery.wookmark.min.js"></script>
@@ -32,7 +31,7 @@
             <li class="item">
                 <a href="index.html" class="cf">
                     <i class="ico-menu1"></i>
-                    <span>品牌首页</span>
+                    <span>首页</span>
                 </a>
             </li>
             <li class="item">
@@ -50,7 +49,7 @@
             <li class="item">
                 <a href="search.html" class="cf">
                     <i class="ico-menu4"></i>
-                    <span>查找商家</span>
+                    <span>搜索</span>
                 </a>
             </li>
         </ul>
@@ -134,5 +133,32 @@
 <div class="mask-black2 none"></div>
 <div class="mask-transparent none"></div>
 <script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    $('#tiles').imagesLoaded(function () {
+        var options = {
+            itemWidth: 150,
+            autoResize: true,
+            container: $('#tiles'),
+            offset: 5,
+            outerOffset: 5,
+            flexibleWidth: '50%'
+        };
+
+        var handler = $('#tiles li'),
+                $window = $(window);
+
+        $window.resize(function () {
+            var windowWidth = $window.width(),
+                    newOptions = {
+                        flexibleWidth: '50%'
+                    };
+            if (windowWidth < 1024) {
+                newOptions.flexibleWidth = '100%';
+            }
+            handler.wookmark(newOptions);
+        });
+        handler.wookmark(options);
+    });
+</script>
 </body>
 </html>
