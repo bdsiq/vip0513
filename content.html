@@ -8,81 +8,90 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>商家详情</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/jquery.cxdialog.css" media="screen">
     <script type="text/javascript" src="js/swiper-2.0.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 </head>
 <body>
 <header class="navbar">
     <div class="nav-wrap-left">
-        <a href="index.html" class="nav-return-btn"></a>
+        <a href="index.html" class="nav-return-btn icon-nav icon-general"></a>
     </div>
     <div class="nav-title">品牌商家</div>
     <div id="J_BtnMenu" class="nav-wrap-right2">
-        <a class="nav-menu-btn"></a>
+        <a class="nav-menu-btn icon-nav icon-general"></a>
     </div>
     <div id="J_Menu" class="nav-menu">
         <ul>
             <li class="item">
                 <a href="index.html" class="cf">
-                    <i class="ico-menu1"></i>
+                        <i class="icon-general icon-menu ico-menu1"></i>
                     <span>首页</span>
                 </a>
             </li>
             <li class="item">
                 <a href="list.html" class="cf">
-                    <i class="ico-menu2"></i>
+                    <i class="icon-general icon-menu ico-menu2"></i>
                     <span>所有分类</span>
                 </a>
             </li>
             <li class="item">
                 <a href="" class="cf">
-                    <i class="ico-menu3"></i>
+                    <i class="icon-general icon-menu ico-menu3"></i>
                     <span>我的品牌</span>
                 </a>
             </li>
             <li class="item">
                 <a href="search.html" class="cf">
-                    <i class="ico-menu4"></i>
+                    <i class="icon-general icon-menu ico-menu4"></i>
                     <span>搜索</span>
                 </a>
             </li>
         </ul>
     </div>
 </header>
-<section class="shop-info">
+<section class="shop-info BounceInB">
     <div class=" pic-txt fl">
         <div class="pic fl"><a href=""><img src="img/s1.jpg"></a></div>
         <div class="txt fl">
             <span class="shop-name fl">蒙自源过桥米线</span>
-
             <div class="pingjia fl">
-                <div class="dealcad-xx fl"></div>
-                <div class="dealcad-xx2 length fl"></div>
+                <div class="icon-stars fl">
+                    <ul>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i></i>
+                    </ul>
+                </div>
             </div>
             <div class="desc fl"><span>口味:8.0</span><span>环境:7.9</span><span>服务:8.0</span></div>
         </div>
     </div>
-    <div class="detail-mode info-address fl">
+    <div class="detail-mode info-add line fl">
         <a href="">
-            <i class="icon1"></i>
+            <i class="icon-general icon-cm icon-add fl"></i>
             <span>崇川区钟秀中路98号五洲国际广场二楼2-013</span>
-            <i class="left-arrow"></i>
+            <i class="icon-general icon-cm left-arrow fr"></i>
         </a>
     </div>
-    <div class="detail-mode info-tel fl">
-        <a href="tel:400-099-0513" class=""><i class="icon2"></i><span>051355887978</span><i class="left-arrow"></i></a>
+    <div class="detail-mode info-tel line fl">
+        <a href="tel:400-099-0513" class="">
+            <i class="icon-general icon-cm icon-tel fl"></i>
+            <span>400-099-0513</span>
+            <i class="icon-general icon-cm left-arrow fr"></i>
+        </a>
     </div>
 </section>
-<section class="shop-info shop-sale">
+<section class="shop-info shop-sale BounceInB2">
     <div class="detail-mode shop-price fl">
-        <span class="big fl"><strong>80</strong>元</span>
-        <span class="del fl">100元</span>
-        <a class="buy-btn fr " href="">免费领取</a>
+        <span class="big fl">￥<strong>8.0</strong></span>
+        <span class="del fl">16元</span>
+        <a class="btn btn-b fr " href="">免费领取</a>
     </div>
     <div class="detail-mode price-desc fl">
-        <div id="fanzhuan" class="hd fl">使用说明<i class="zk"></i></div>
-        <div id="useTxt" class="bd fl" style="display: none">
+        <div id="fanzhuan" class="hd  fl">使用说明<i class="zk"></i></div>
+        <div id="useTxt" class="bd fl">
             <p>
                 <span><strong>有效期</strong>2015-02-10至2015-10-31</span>
                 <span><strong>规则提醒</strong>每张抵用券仅限1人使用</span>
@@ -93,30 +102,36 @@
     </div>
     <div class="detail-mode share-fav fl">
         <ul>
-            <li><a href="javascript:" class="share">
-                <div><i></i><span>分享</span></div>
+            <li><a class="share btn btn-a" href="javascript:">
+                <div><i class="icon-general icon-sharefav icon-share fl"></i><span>分享</span></div>
             </a></li>
-            <li><a href="javascript:" class="fav">
-                <div><i></i><span>收藏</span></div>
+            <li><a class="fav btn btn-a" href="javascript:">
+                <div><i class="icon-general icon-sharefav icon-fav fl"></i><span>收藏</span></div>
             </a></li>
         </ul>
     </div>
 </section>
 
-<section class="shop-info shop-comment">
+<section class="shop-info shop-comment BounceInB3">
     <div class="detail-mode shop-pj fl">
-        <a class="hd fl" href="evaluate.html"><span>评价</span><i class="left-arrow fr"></i></a>
+        <a class="hd fl" href="evaluate.html"><span>评价</span><i class="icon-general icon-cm left-arrow fr"></i></a>
+
         <div class="bd fl">
             <div class="user-img fl">
                 <img src="img/t1.jpg">
             </div>
             <div class="user-txt fl">
                 <span class="user-name">苏鲁梅朵</span>
-                <div class="pingjia fl">
-                    <div class="dealcad-xx fl"></div>
-                    <div class="dealcad-xx2 length fl"></div>
-                    <div class="dealcad-time fr">2015-10-17</div>
+                <div class="icon-stars fl">
+                    <ul>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i></i>
+                    </ul>
                 </div>
+                <div class="dealcad-time fr">2015-10-17</div>
                 <p>
                     公司聚餐。环境还不错，对于寸土寸金的自助餐厅来说很有情怀，喜欢。布局有的地方过道有点窄，但也在接受范围内。
                 </p>
@@ -129,11 +144,17 @@
             </div>
             <div class="user-txt fl">
                 <span class="user-name">苏鲁梅朵</span>
-                <div class="pingjia fl">
-                    <div class="dealcad-xx fl"></div>
-                    <div class="dealcad-xx2 length fl"></div>
-                    <div class="dealcad-time fr">2015-10-17</div>
+                <div class="icon-stars fl">
+                    <ul>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i class="active"></i>
+                        <i></i>
+                    </ul>
                 </div>
+                <div class="dealcad-time fr">2015-10-17</div>
+
                 <p>
                     我最喜欢他们家的米线，里面的番茄牛肉和酸辣米线挺好吃的，还有小炒肉饭和肥牛饭也好吃。每个礼拜都要去好几次，今天点的番茄牛肉米线和肥牛饭挺不错的。
                 </p>
@@ -141,11 +162,11 @@
             </div>
         </div>
         <div class="bd pj-btn fl">
-            <a href="" >我要点评</a>
+            <a href="" class="btn btn-a">我要点评</a>
         </div>
     </div>
 </section>
-<footer class="foot">
+<footer class="foot BounceInB4">
     ©2015 品牌商家 苏ICP备05014191号
 </footer>
 <div class="top-btn">

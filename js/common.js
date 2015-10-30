@@ -36,6 +36,45 @@ $(function () {
 
     // 收藏e
 
+    // 模拟点击active事件
+    $('.header .icon, .btn, .header-sub .lb, .header-sub .rb, .tab-link li a, .art-ft .opt a, .dialog .ft a, .search-link a, .nav li a').on('touchstart', function() {
+        var _this = this;
+        var timer = null;
+
+        clearTimeout(timer);
+        $(this).addClass('active');
+        timer = setTimeout(function() {
+            $(_this).removeClass('active');
+        }, 300);
+    });
+
+    // 详情页—点赞
+    $('.opt-zan').on('click',function(){
+        var $em = $(this).find('em'),
+            iconzan = $(this).find('.icon-zan')
+            num = parseFloat($em.text());
+        msg.css({'width':'90px', 'margin-left':'-45px'});
+        if (!this.classList.contains('on')) {
+            this.classList.add('on');
+            iconzan.addClass('on');
+            iconzan.addClass('BounceInC');
+            msg.text('赞+1');
+            $em.text(num + 1);
+        } else {
+            this.classList.remove('on');
+            iconzan.removeClass('on');
+            iconzan.removeClass('BounceInC');
+            msg.text('取消赞');
+            $em.text(num - 1);
+        }
+
+        clearTimeout(timer1);
+        showBox();
+        timer1 = setTimeout(function() {
+            hideBox();
+        }, 1500);
+    });
+
 
 
     //首页菜单
@@ -175,7 +214,7 @@ $(function () {
         $useSm = $('#useTxt');
 
     $arrowFz.on(CLICK, function () {
-        $useSm.slideToggle();
+        $useSm.toggle();
         //$arrowDown.toggleClass('active');
     });
 

@@ -9,19 +9,20 @@
     <title>品牌商家</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/index.css" media="screen">
-    <script type="text/javascript" src="js/swiper-2.0.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/swiper-2.0.min.js"></script>
 </head>
 <body>
+<script type="text/javascript" src="js/common.js"></script>
 <div class="root">
     <div class="main">
         <header class="navbar">
             <div class="nav-wrap-left">
-                <a id="list-btn"></a>
+                <a href="javascript:" id="list-btn" class="icon-nav icon-general"></a>
             </div>
             <div class="nav-title">品牌商家</div>
             <div class="nav-wrap-right">
-                <a href="search.html" class="nav-search"></a>
+                <a href="search.html" class="nav-search icon-nav icon-general"></a>
             </div>
         </header>
         <section class="banner">
@@ -364,36 +365,32 @@
             ©2015 品牌商家 苏ICP备05014191号
         </footer>
         <span class="navdrawer-mask"></span>
-
         <div class="top-btn">
             <a class="react"></a>
         </div>
     </div>
     <div class="navdrawer" style="display:block;">
         <div class="user">
-            <div class="user-inner cf"><a href=""
-                                          class="avatar"> <img src="img/user.png"> </a>
-
+            <div class="user-inner cf"><a href="" class="avatar EasyIn"> <img src="img/user.png"> </a>
                 <div class="user-name"><a
                         href="http://wap.0513.org/member.php?mod=logging&action=login&mobile=2">立即登录</a></div>
             </div>
         </div>
         <nav class="menu-list">
             <ul>
-                <li class="cur"><a href="index.html"><i class="iconfont ico-home"></i><span>首页</span></a>
+                <li class="cur"><a href="index.html"><i class="icon-general icon-index ico-home EasyIn2"></i><span>首页</span></a>
                 </li>
-                <li><a href="list.html"><i class="iconfont ico-nav"></i><span>分类</span></a>
+                <li><a href="list.html"><i class="icon-general icon-index ico-nav EasyIn3"></i><span>分类</span></a>
                 </li>
                 <li><a href="myfavorite.html"><i
-                        class="iconfont ico-delicate"></i><span>收藏</span></a></li>
+                        class="icon-general icon-index ico-delicate EasyIn4"></i><span>收藏</span></a></li>
                 <li><a href=""><i
-                        class="iconfont ico-photography"></i><span>设置</span></a></li>
+                        class="icon-general icon-index ico-photography EasyIn5"></i><span>设置</span></a></li>
             </ul>
         </nav>
     </div>
 </div>
 <div class="pullrefresh" style="display:none;"></div>
-<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
     //滑动效果
     var mySwiper;
